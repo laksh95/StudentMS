@@ -17,6 +17,7 @@ function showNone()
 	document.getElementById("subject").style.display="none";
 	document.getElementById("teacher").style.display="none";
 	document.getElementById("sdept").style.display="none";
+	document.getElementById("make").style.display="none";
 }
 function goHome()
 {
@@ -324,4 +325,60 @@ function logOut()
 	localStorage.setItem("login","false");
 	window.open("index.html","_self");
 
+}
+function showHOD()
+{
+	showNone();
+	document.getElementById("make").style.display="block";
+
+}
+function add()
+{
+	var teachname=document.getElementById("teachname").value;
+	var deptname=document.getElementById("deptname").value;
+	var flag=1;
+	if(teachname==null)
+	{
+		// flag=0;
+		document.getElementById("terror").innerHTML="empty field not allowed";
+		document.getElementById("tname").value="";
+	}
+	if(deptname==null)
+	{
+		// flag=0;
+		document.getElementById("derror").innerHTML="empty field not allowed";	
+		document.getElementById("dname").value="";
+	}
+	var teach=[];
+	teach=JSON.parse(localStorage.getItem("teacherArray"));
+	var dept=JSON.parse(localStorage.getItem("department"));
+	flag=0;
+	for(var j=0;j<dept.length;j++)
+	{
+		if(dept[j]==deptname)
+		{
+			flag=1;
+		}
+	}
+	if(!flag)
+	{
+		document.getElementById("derror").innerHTML="Enter Correct name of the department";	
+		document.getElementById("dname").value="";
+	}
+	else{
+		for(var i=0;i<teach.length;i++)
+		{
+			if((teach[i].role=="hod" || teach[i].role=="HOD") && teach[i].dept==deptname)
+			{
+				teach[i].role="teacher";
+			}
+			if((teach[i].role=="teacher" || teach[i].role=="Teacher") && teach[i].dept==deptname)
+			{
+				teach[i].role="hod";
+				break;
+			}
+		}
+		localStorage.setItem("teacherArray",JSON.stringify(teach));
+		goHome();
+	}
 }

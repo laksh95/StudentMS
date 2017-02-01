@@ -11,8 +11,7 @@
 		<button type="button" id="lout" value="Logout" class="lgout" onclick="logOut()">Logout</button>
 	</div>
 	<div class="std">
-
-		<button type="button" class="addhod" id="hod">Make HOD</button>
+		<button type="button" class="addhod" id="hod" onclick="showHOD()">Make HOD</button>
 	</div>
 	<div class="menu">
 		<div class='inline'>
@@ -93,6 +92,14 @@
 			<button type="button" class="addbtn" onclick="addSubject()">Save</button>
 			&nbsp;&nbsp;
 			<button type="button" class="addbtn" onclick="goHome()">Cancel</button>
+		</div>
+		<div id="make">
+		<input type="text" class="txtbox" placeholder="Teacher Name" id="teachname">&nbsp;&nbsp;&nbsp;&nbsp;
+		<label for="tname" id="terror"></label><br><br>
+		<input type="text" class="txtbox" placeholder="Department Name" id="deptname">&nbsp;&nbsp;&nbsp;&nbsp;
+		<label for="dname" id="derror"></label><br><br>
+		<input type="submit" class="addbtn" onclick="add()" value="Save">
+		<input type="button" class="addbtn" onclick="goHome()" value="Cancel">
 		</div>
 	</div>
 </body>

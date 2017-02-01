@@ -73,3 +73,7 @@ function checkAdmin(uname,pass)
 		return true;
 	return false;
 }
+function cancel()
+{
+	window.open("index.html","_self");
+}
