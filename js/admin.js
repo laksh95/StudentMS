@@ -49,19 +49,23 @@ function makeList()
 }
 function checkDept(departments,dep)
 {
-	console.log("checkDept()");
 	var flag=1;
+	var flag1=1;
 	for(var i=0;i<departments.length;i++){
 		if(dep=="" || dep==departments[i])
-		{
-			console.log(departments[i]+"loop");
 			flag=0;
-		}	
 	}
 	for(i=0;i<givenDept.length;i++)
 	{
 		if(dep==givenDept[i])
-			flag=1;
+		{
+			flag1=0;
+			flag=0;
+		}
+	}
+	if(flag1==1)
+	{
+		document.getElementById("error").innerHTML="Incorrect Deparment";
 	}
 	if(flag)
 		return true;
@@ -104,7 +108,7 @@ function addDept()
 			else
 			{
 				document.getElementById("depts").innerHTML="";
-				document.getElementById("error").innerHTML="Incorrect department";
+				document.getElementById("error").innerHTML="Department Already Exists";
 			}
 		}
 	}

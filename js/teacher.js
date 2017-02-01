@@ -57,6 +57,18 @@ function logOut()
 function editDetails()
 {
 	document.getElementById("set3").style.display="block";
+	var person=JSON.parse(localStorage.getItem("personalDetails"));
+	var name=document.getElementById("name").value;
+	for(var i=0;i<person.length;i++)
+	{
+		if(person[i].name==name)
+		{
+			document.getElementById("ehsc").value=person[i].hsc;
+			document.getElementById("essc").value=person[i].ssc;
+			document.getElementById("eunder").value=person[i].under;
+			document.getElementById("emaster").value=person[i].master;	
+		}
+	}
 }
 function clearAll()
 {
@@ -110,9 +122,16 @@ function saveDetails()
 }
 function addStudent()
 {
-	document.getElementById("info").style.display="none";
-	document.getElementById("set3").style.display="none";
-	document.getElementById("student").style.display="block";
+	var role=document.getElementById("role").value;
+	if(role!="hod" || role!="HOD")
+	{
+		document.getElementById("roleErr").value="Only HOD can add student";
+	}
+	else{
+		document.getElementById("info").style.display="none";
+		document.getElementById("set3").style.display="none";
+		document.getElementById("student").style.display="block";
+	}
 }
 function addStudentDetails()
 {
