@@ -1,5 +1,5 @@
 #window{
-	border:3px solid;
+	border:3px solid grey;
 	padding: 20px;
 	width:50%;
 	margin:auto;
@@ -11,4 +11,16 @@
 {
 		text-align: center;
 		padding: 10px;
+}
+.btn
+{
+	padding: 10px;
+	size: 24px;
+	font-size: 14px;
+	font-family: verdana;
+	margin-top:10px;
+	background-color: green;
+	border-radius: 8px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	color:white;
 }
