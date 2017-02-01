@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Management System</title>
+	<link rel="stylesheet" href="css/logged.css">
+	<script type="text/javascript" src="js/teacher.js"></script>
+	<script type="text/javascript" src="js/validate.js"></script>
+</head>
+<body>
+	<div class="header">
+		<label id='head'></label>
+		<button type="button" value="Logout" class="lgout" onclick="logOut()">Logout</button>
+	</div>
+	<nav class="std">
+		<img src="img/profile.png" width="130" height="130" alt="Profile Photo"><br><br>
+		<button type="button" value="Add Student" class="addbtn" onclick="addStudent()">Add Student</button>
+	</nav>
+	<div class="set2" id="info">
+		<br><br>
+		<label class="content">Name:&nbsp;&nbsp;<input type="text" id="name" size="25" readonly></label><br><br>
+		<label class="content">Age:&nbsp;&nbsp;<input type="text" id="age" size="25" readonly></label><br><br>
+		<label class="content">Role:&nbsp;&nbsp;<input type="text" id="role" size="25" readonly></label><br><br>
+		<label class="content">High School:&nbsp;&nbsp;<input type="text" id="hsc" size="25" readonly></label><br><br>
+		<label class="content">Senior Secondary School:&nbsp;&nbsp;<input type="text" id="ssc" size="25" readonly></label><br><br>
+		<label class="content">undergaduation:&nbsp;&nbsp;<input type="text" id="under" size="25" readonly></label><br><br>
+		<label class="content">Postgraduaton:&nbsp;&nbsp;<input type="text" id="master" size="25" readonly></label><br><br>
+		<button class="addbtn" type="button" value="edit details" onclick="editDetails()">Edit Details</button>
+	</div>
+	<div id="set3">
+		<strong><label class="content-personal">Personal Details</label></strong><br><br>
+		<label class="content">High School:&nbsp;&nbsp;<input type="text" id="ehsc" size="25"></label><br><br>
+		<label class="content">Senior Secondary School:&nbsp;&nbsp;<input type="text" id="essc" size="25"></label><br><br>
+		<label class="content">undergaduation:&nbsp;&nbsp;<input type="text" id="eunder" size="25"></label><br><br>
+		<label class="content">Postgraduaton:&nbsp;&nbsp;<input type="text" id="emaster" size="25"></label><br><br>
+		<input type="submit" class="btn" value="Save" onclick="saveDetails()">
+		<button type="button" class="btn" value="Cancel" onclick="clearAll()">Cancel</button>
+	</div>
+	<div class="set2" id="student">
+	<br><br>
+		<label class="content">Name:&nbsp;&nbsp;<input type="text" id="sname" size="25"></label><br><br>
+		<label class="content" id="nameErr" for="sname"></label>
+		<label class="content">Username:&nbsp;&nbsp;<input type="text" id="suname" size="25"></label><br><br>
+		<label class="content">Password:&nbsp;&nbsp;<input type="password" id="password" size="25"></label><br><br>
+		<label class="content">Confirm Password:&nbsp;&nbsp;<input type="password" id="cpassword" size="25"></label><br><br>
+		<label class="content" id="passErr" for="cpassword"></label>
+		<input type="submit" class="btn" value="Add" onclick="addStudentDetails()">
+		<button type="button" class="btn" value="Cancel" onclick="cancel()">Cancel</button>
+	</div>
+</body>
+</html>

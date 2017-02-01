@@ -1,0 +1,99 @@
+<html>
+<head>
+	<title>Student Management System</title>
+	<script type="text/javascript" src="js/admin.js"></script>
+	<script type="text/javascript" src="js/validate.js"></script>
+	<link rel="stylesheet" href="css/logged.css">
+</head>
+<body>
+	<div class="header">
+		<span>Admin</span>
+		<button type="button" id="lout" value="Logout" class="lgout" onclick="logOut()">Logout</button>
+	</div>
+	<div class="std">
+
+		<button type="button" class="addhod" id="hod">Make HOD</button>
+	</div>
+	<div class="menu">
+		<div class='inline'>
+			<div class="adminctrl" id="ctrl" style="display:inline;">
+				<button type="button" id="deptName" class="addbtn" onclick="showDeptm()">Add Dept.</button>
+				<button type="button" id="tchr" class="addbtn" onclick="addTeacher()">Add Teacher</button>
+				<button type="button" id="sub" class="addbtn" onclick="showSubject()">Add Subject</button>
+				<button type="button" id="shw" class="addbtn" onclick="showOptions()">Display options</button>
+				<br>
+				<br>
+			</div>
+		</div>
+		
+		<div id="sdept">
+			<select name="show"  id="opt" class="txtbox">
+				<option value="1">Choose Options</option>
+				<option value="2">Show Teacher by dept.</option>
+				<option value="3">Show Teacher by Subject.</option>
+			</select>
+			<button type="button" id="submit" class="showbtn" onclick="disp()">Submit</button>
+			<button type="button" class="showbtn" onclick="goHome()">Go Back</button>
+			<br>
+			<br>
+			<label id="display" class="txtbox"></label>
+		</div>
+		<div id="dpt">
+			<form >
+				<input list="depts" class="txtbox" id="dep">
+  					<datalist id="depts">
+  					</datalist>
+  				<button type="button" id="add" class="addbtn" onclick="addDept()">Add Dept</button>
+  				<button type="button" id="back" class="addbtn" onclick="goHome()">Go Back</button>
+  				<label for="dep" id="error"></label>
+			</form>
+		</div>
+		<div id="teacher">
+			<input type="text" id="tname" placeholder="Name" class="txtbox">&nbsp;&nbsp;&nbsp;&nbsp;
+			<label for="tname" id="nameErr"></label>
+			<br>
+			<br>
+			<input type="text" id="uname" placeholder="Username" class="txtbox">&nbsp;&nbsp;&nbsp;&nbsp;
+			<label for="uname" id="usernameErr"></label>
+			<br>
+			<br>
+			<input type="password" id="pass" placeholder="Password" class="txtbox">&nbsp;&nbsp;&nbsp;&nbsp;
+			<label for="pass" id="passErr"></label>
+			<br>
+			<br>
+			<input type="text" id="dptName" placeholder="Department" class="txtbox">&nbsp;&nbsp;&nbsp;&nbsp;
+			<label for="dept" id="deptErr"></label>
+			<br>
+			<br>
+			<input type="text" id="subname" placeholder="Subject Name" class="txtbox">&nbsp;&nbsp;&nbsp;&nbsp;
+			<label for="tname" id="subErr"></label>
+			<br>
+			<br>
+			<input type="text" id="age" placeholder="Age" class="txtbox">&nbsp;&nbsp;&nbsp;&nbsp;
+			<label for="age" id="ageErr"></label>
+			<br>
+			<br>
+			<input type="text" id="role" placeholder="Role" class="txtbox">&nbsp;&nbsp;&nbsp;&nbsp;
+			<label for="role" id="roleErr"></label>
+			<br>
+			<br>
+			<button type="button" id="save" class="addbtn" onclick="getValues()">Save</button>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<button type="button" id="cancel" class="addbtn" onclick="goHome()">Cancel</button>
+		</div>
+		<div id="subject">
+			<input type="text" class="txtbox" id="sname" placeholder="Subject Name">&nbsp;&nbsp;&nbsp;&nbsp;
+			<label for="sname" id="snameErr"></label>
+			<br>
+			<br>
+			<input type="text" class="txtbox" id="dname" placeholder="Department Name">&nbsp;&nbsp;&nbsp;&nbsp;
+			<label for="dname" id="dnameErr"></label>
+			<br>
+			<br>
+			<button type="button" class="addbtn" onclick="addSubject()">Save</button>
+			&nbsp;&nbsp;
+			<button type="button" class="addbtn" onclick="goHome()">Cancel</button>
+		</div>
+	</div>
+</body>
+</html>

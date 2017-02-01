@@ -1,0 +1,14 @@
+#window{
+	border:3px solid;
+	padding: 20px;
+	width:50%;
+	margin:auto;
+	margin-top: 250px;
+	font-family: verdana;
+	font-size: 14px;
+}
+#txt
+{
+		text-align: center;
+		padding: 10px;
+}

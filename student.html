@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Management System</title>
+	<link rel="stylesheet" href="css/logged.css">
+	<script type="text/javascript" src="js/student.js"></script>
+</head>
+<body>
+	<div class="header">
+		<label id='head'></label>
+		<button type="button" value="Logout" class="lgout" onclick="logOut()">Logout</button>
+	</div>
+	<nav class="std">
+		<img src="img/profile.png" width="130" height="130" alt="Profile Photo"><br><br>
+		<button type="button" value="Add Student" class="addbtn" onclick="edit()">Edit Details</button>
+	</nav>
+	<div class="set2" id="info">
+		<br><br>
+		<label class="content">Name:&nbsp;&nbsp;<input type="text" id="name" size="25" readonly></label><br><br>
+		<label class="content">Username:&nbsp;&nbsp;<input type="text" id="uname" size="25" readonly></label><br><br>
+	</div>
+	<div class="set2" id="editInfo">
+		<br><br>
+		<label class="content">username:&nbsp;&nbsp;<input type="text" id="esuname" size="25"></label><br><br>
+		<label class="content">Password:&nbsp;&nbsp;<input type="text" id="epass" size="25"></label><br><br>
+		<label class="content">Confirm Password:&nbsp;&nbsp;<input type="text" id="cpass" size="25"></label><br><br>
+		<label class="content" id="passErr" for="cpassword"></label>
+		<label class="content" id="passErr" for="esuname"></label>
+		<input type="submit" class="btn" value="Save" onclick="editDetails()">
+		<button type="button" class="btn" value="Cancel" onclick="clearAll()">Cancel</button>
+	</div>
+</body>
+</html>

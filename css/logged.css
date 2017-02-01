@@ -1,0 +1,127 @@
+.header{
+	height: 50px;
+	font-family: verdana;
+	font-style: italic;
+	font-size: 18px;
+	border-bottom: 2px solid;
+}
+.lgout{
+	float:right;
+	size: 24px;
+	padding: 10px;
+	font-size: 14px;
+	background-color: green;
+	border-radius: 8px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	color:white;
+
+}
+.std{
+	border-right: 3px solid;
+	width: 170px;
+	text-align: center;
+	height: 100%;
+	/*margin:left;*/
+	float: left;
+}
+.set1{							
+	width:20%;
+	float:left;
+	border-right: px solid;
+	height:100%;
+}
+.addhod{
+	margin: center;
+	padding: 10px;
+	margin-top: 250px;
+	background-color: green;
+	border-radius: 8px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	color:white;
+}
+.adminctrl{
+	display: inline;
+	float: left;
+}
+.addbtn{
+	padding: 10px;
+	size: 24px;
+	font-size: 14px;
+	font-family: verdana;
+	margin-top:10px;
+	margin-left:25px;
+	margin-right: 25px;
+	background-color: green;
+	border-radius: 8px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	color:white;
+}
+.adshow{
+	padding: 20px;
+	margin-left: 30px
+	margin-top:10px;
+}
+.showbtn{
+	padding: 5px;
+	size:14px;
+	width: 60px;
+	background-color: green;
+	border-radius: 8px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	color:white;
+}
+.txtbox{
+	padding: 5px;
+	font-family: verdana;
+	margin-left: 30px;
+	margin-top: 10px;
+	align-content: center;
+}
+.inline{
+	display: inline-flex;
+	width: 80%;
+	float: left ;
+}
+img
+{
+	margin-top: 60px;
+	margin-left:20px;
+}
+
+.set2
+{
+	width:80%;
+	float: left;
+}
+.content{						
+	float:right;
+	margin-right: 45%;
+	font-size: 16px;
+	font-family: verdana;
+}
+#set3{
+	width: 80%;
+	float: left;
+	margin-left: 20%
+}
+.content-personal
+{
+	font-size: 16px;
+	font-family: verdana;
+	margin-left: 30%;
+}
+.btn
+{
+	padding: 10px;
+	size: 24px;
+	font-size: 14px;
+	font-family: verdana;
+	margin-top:10px;
+	margin-left:25px;
+	margin-right: 25px;
+	background-color: green;
+	border-radius: 8px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	color:white;
+	margin-left: 18%;
+}
